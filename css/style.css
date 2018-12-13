@@ -1,0 +1,225 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    min-width: 600px;
+}
+
+#error {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: #a00909;
+    margin: 10px;
+}
+
+#recomend {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: #5EC205;
+    margin: 10px;
+}
+
+
+/*      */
+/* BLKS */
+/*      */
+
+.content {
+    width: 90%;
+    margin: 40px auto;
+}
+
+.content_parts {
+    display: block;
+}
+
+#header {
+    background: #58a6f0;
+    color: #fff;
+    font-size: 46px;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.part {
+    display: none;
+    width: 500px;
+    background: #f5f5f5;
+    text-align: center;
+    margin: auto;
+}
+
+#header_part {
+    display: block;
+    width: 500px;
+    background: #f5f5f5;
+    text-align: center;
+    margin: auto;
+}
+
+.part_header {
+    padding: 5px;
+    font-size: 22px;
+    background: #1478d2;
+    color: #fff;
+    height: 30px;
+}
+
+/*      */
+/* INPS */
+/*      */
+
+.input_pair {
+    position: relative;
+    width: 100%;
+}
+
+.input_pair label {
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    padding: 3px 1px;
+    font-size: 18px;
+    background: #1581E8;
+    color: #fff;
+    width: 158px; /*100 with padding*/
+}
+
+.input_pair select {
+    width: 360px; /*300 - 5padding(from35) - 2border*/
+    height: 44px;
+    padding: 2px 0px 2px 35px;
+    margin: 11px 0px 20px 140px;
+    font-size: 20px;
+    border: 1px solid #fff;
+}
+
+.input_pair input {
+    width: 323px; /*300 - 5padding(from35) - 2border*/
+    height: 38px;
+    padding: 2px 0px 2px 35px;
+    margin: 11px 0px 20px 140px;
+    font-size: 20px;
+    border: 1px solid #fff;
+}
+
+.input_pair small {
+    position: absolute;
+    top: 42px;
+    right: 0px;
+    color: #436280;
+    font-size: 12px;
+    font-style: italic;
+    pointer-events: none;
+}
+
+.captcha_block {
+    width: 304px;
+    margin: 10px auto 0px auto;
+}
+
+.captcha_div {
+    text-align: center;
+}
+
+/*      */
+/* BTNS */
+/*      */
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    background-color: #58a6f0;
+    color: #fff;
+    border: 1px solid transparent;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #58a6f0;
+}
+
+#btn_recover_pass {
+    position: absolute;
+    top: 42px;
+    right: 0px;
+    color: #436280;
+    font-size: 12px;
+    font-style: italic;
+}
+
+#btn_recover_pass:hover {
+    color: #58a6f0;
+}
+
+/*      */
+/* PERS */
+/*      */
+
+.personal_info {
+    padding: 10px;
+    font-size: 16px;
+}
+
+#fio_info {
+    font-size: 22px;
+    color: #1581E8;
+}
+
+#email_info {
+    color: #1581E8;
+}
+
+
+/*      */
+/* NEWS */
+/*      */
+
+.news_header {
+    font-size: 22px;
+    text-align: left;
+    color: #1581E8;
+}
+
+.news_block {
+    padding: 10px 10px 30px;
+    font-size: 16px;
+}
+
+.news_block p {
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.news_highlight {
+    color: #1581E8;
+}
+
+.news_date {
+    text-align: right;
+    color: #1581E8;
+}
+
