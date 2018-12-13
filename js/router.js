@@ -22,6 +22,20 @@ function getUrlParam(parameter, defaultvalue){
 if (!NodeList.prototype.forEach && Array.prototype.forEach) {
     NodeList.prototype.forEach = Array.prototype.forEach;
 }
+
+const fileapi = (window.File && window.FileReader && window.FileList && window.Blob) ? true : false
+const fileInputs = document.querySelectorAll('[type="file"')
+fileInputs.forEach(input => {
+    input.addEventListener('change', () => {
+        let filename = ''
+        if (fileapi && input.files[0]) {
+            filename = input.files[0].name
+        } else {
+            filename = input.value.replace('C:\\fakepath\\', '')
+        }
+        input.parentNode.parentNode.querySelector('.file_name').innerHTML = filename
+    })
+})
   
 
 let recoverCaptchaId = -1;
@@ -692,6 +706,28 @@ details_form.addEventListener('submit', event => {
         
     }	
 });
+
+const annotations_form = document.getElementById("files_annotations");
+annotations_form.addEventListener('submit',event => {
+    event.preventDefault()
+    const docinput = document.querySelector('[name="annotation_doc"]')
+    const pdfinput = document.querySelector('[name="annotation_pdf"]')
+
+    if (docinput.value === "" || pdfinput.value === "") {
+        document.querySelector('.annotations_error_validate').innerHTML = 'Выберите 2 файла аннтоации: в формате doc и в формате pdf'
+    } else {
+        console.log([docinput.files[0], pdfinput.files[0]])
+        FileAPI.upload({
+            url: 'http://olymp.bmstu.ru/api/annotations/upload',
+            headers: {
+                'Access-Controll-Request-Method': 'POST'
+            },
+            files: {
+                files: [docinput.files[0], pdfinput.files[0]]
+            }
+        })
+    }
+})
 
 window.onload = function() {
     //showError("Для работы с системой рекомендуется использовать браузеры Google Chrome или Mozzila Firefox последних версий", true);
