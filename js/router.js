@@ -718,7 +718,7 @@ annotations_form.addEventListener('submit',event => {
     } else {
         console.log([docinput.files[0], pdfinput.files[0]])
         FileAPI.upload({
-            url: 'http://olymp.bmstu.ru/api/annotations/upload',
+            url: 'https://olymp.bmstu.ru/api/annotations/upload',
             headers: {
                 'Access-Controll-Request-Method': 'POST'
             },
